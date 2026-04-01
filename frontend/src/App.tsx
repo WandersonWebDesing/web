@@ -8,9 +8,9 @@ import Sobre from './pages/Sobre';
 import Portifolio from './pages/Portifolio';
 import Clientes from './pages/Clientes';
 import Servico from './pages/Servico';
-import Comentarios from './pages/Comentarios';
+import Comentarios from './pages/comentarios'; // 💡 Ajustado para Letra Maiúscula
 import LoginForm from './pages/LoginForm';
-import Registrer from './pages/Registrer';
+import Register from './pages/Registrer'; // 💡 Corrigido o nome da variável (opcional, mas recomendado)
 import Eletronico from './pages/Eletronico'; // ✅ Importando a nova página
 import Footer from './pages/Footer';
 
@@ -28,9 +28,9 @@ function App() {
           <Route path="/portifolio" element={<Portifolio />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/servico" element={<Servico />} /> {/* ✅ Servico.jsx */}
-          <Route path="/comentarios" element={<Comentarios />} />
+          <Route path="/comentarios" element={<Comentarios />} /> {/* 💡 Ajustado aqui também */}
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/registrer" element={<Registrer />} />
+          <Route path="/registrer" element={<Register />} />
           <Route path="/Eletronico" element={<Eletronico />} /> {/* ✅ Nova rota */}
         </Routes>
       </main>

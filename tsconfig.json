@@ -1,7 +1,29 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* 🛑 Ajustado para não dar erro com as extensões .tsx */
+    "noEmit": true, 
+    "allowImportingTsExtensions": true, 
+
+    /* JSX Config */
+    "jsx": "react-jsx",
+    
+    /* Permite ler seus arquivos .jsx das páginas */
+    "allowJs": true,                   
+    "checkJs": false                  
+  },
+  "include": [
+    "frontend/src"                
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
