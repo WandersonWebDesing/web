@@ -11,7 +11,8 @@ import Servico from './pages/Servico';
 import Comentarios from './pages/comentarios'; // 💡 Ajustado para Letra Maiúscula
 import LoginForm from './pages/LoginForm';
 import Register from './pages/Registrer'; // 💡 Corrigido o nome da variável (opcional, mas recomendado)
-import Eletronico from './pages/Eletronico'; // ✅ Importando a nova página
+// @ts-ignore
+import Eletronico from './pages/Eletronico';
 import Footer from './pages/Footer';
 
 function App() {
