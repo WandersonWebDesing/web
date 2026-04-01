@@ -1,0 +1,123 @@
+/* ========================= */
+/* 🎨 VARIÁVEIS GLOBAIS */
+/* ========================= */
+:root {
+  --cor-primaria: #1e3a8a; /* Azul principal */
+  --cor-secundaria: #0f172a; /* Fundo escuro */
+  --cor-destaque: #38bdf8; /* Azul claro */
+  --cor-texto: #ffffff;
+  --cor-bg: #0f172a;
+  --border-radius: 12px;
+}
+
+/* ========================= */
+/* 🌟 CONTAINER PRINCIPAL */
+/* ========================= */
+.sobre-container {
+  background: var(--cor-bg);
+  color: var(--cor-texto);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sobre-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sobre-header h1 {
+  font-size: 3rem;
+  color: var(--cor-destaque);
+}
+
+.sobre-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* ========================= */
+/* 🌟 CONTEÚDO PRINCIPAL */
+/* ========================= */
+.sobre-content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sobre-foto img {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  border: 3px solid var(--cor-destaque);
+  transition: transform 0.3s ease;
+}
+
+.sobre-foto img:hover {
+  transform: scale(1.05);
+}
+
+.sobre-texto {
+  max-width: 700px;
+}
+
+.sobre-texto h2 {
+  color: var(--cor-destaque);
+  margin-top: 20px;
+}
+
+.sobre-texto p, .sobre-texto ul {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.sobre-texto ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.contato-btn {
+  margin-top: 20px;
+  background-color: var(--cor-destaque);
+  color: var(--cor-bg);
+  padding: 12px 25px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contato-btn:hover {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVO */
+/* ========================= */
+@media (max-width: 900px) {
+  .sobre-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-foto img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .sobre-texto ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .sobre-texto ul li::before {
+    content: "✅ ";
+    color: var(--cor-destaque);
+  }
+}

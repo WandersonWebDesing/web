@@ -1,0 +1,69 @@
+/* src/components/Servicos.css */
+
+.servicos {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0d6efd, #6f42c1);
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.titulo-servicos {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitulo-servicos {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cards-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card-servico {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card-servico:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-servico h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-servico p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.diferencial {
+  display: block;
+  font-weight: 600;
+  color: #ffd700;
+  font-style: italic;
+}
+
+.cta-servicos {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "wandersonweb-bot",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp com Twilio",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Wanderson",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/api-client": "^13.5.0",
+    "dotenv": "^17.3.1",
+    "express": "^4.19.2",
+    "twilio": "^4.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

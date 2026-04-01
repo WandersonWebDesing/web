@@ -1,0 +1,270 @@
+/* ========================= */
+/* 🎨 VARIÁVEIS */
+/* ========================= */
+:root {
+  --cor-primaria: #1e3a8a;
+  --cor-secundaria: #0f172a;
+  --cor-destaque: #38bdf8;
+  --cor-bg: #020617;
+  --cor-texto: #ffffff;
+  --cor-whatsapp: #25D366;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(90deg, var(--cor-secundaria), var(--cor-primaria));
+  color: var(--cor-texto);
+
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--cor-texto);
+}
+
+/* ========================= */
+/* MENU DESKTOP */
+/* ========================= */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--cor-destaque);
+}
+
+/* DROPDOWN */
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  display: none;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown div {
+  padding: 10px;
+}
+
+/* ========================= */
+/* AÇÕES */
+/* ========================= */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #1e293b;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--cor-texto);
+  margin-left: 5px;
+}
+
+.icon {
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+button {
+  background: var(--cor-destaque);
+  border: none;
+  padding: 8px 16px; /* maior padding para destacar */
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #22a7f0;
+}
+
+/* ========================= */
+/* BOTÃO FLUTUANTE WHATSAPP */
+/* ========================= */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;       /* ⚡ movido para a direita */
+  bottom: 20px;
+  width: 70px;       /* aumenta visibilidade */
+  height: 70px;
+  z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background-color: var(--cor-whatsapp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.whatsapp-float img {
+  width: 36px;
+  height: 36px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+.menu-mobile-icon {
+  display: none;
+  color: var(--cor-texto);
+  cursor: pointer;
+  font-size: 28px;
+}
+
+/* MENU LATERAL */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 260px;
+  height: 100vh;
+  background: var(--cor-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s;
+  z-index: 1500;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.mobile-item button {
+  background: none;
+  color: var(--cor-texto);
+  border: none;
+  text-align: left;
+  padding: 10px;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu.open {
+  max-height: 200px;
+}
+
+.submenu a {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-mobile-icon {
+    display: block;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  button {
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,76 @@
+/* src/pages/css/eletronicos.css */
+
+.eletronicos-container {
+  padding: 50px 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #0a0f2c;
+}
+
+.eletronicos-container h1 {
+  color: #0a3cff; /* azul principal WandersonWeb */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.eletronicos-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #121a3a;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.produto-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.produto-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.produto-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.produto-card .preco {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0a3cff;
+  margin-bottom: 15px;
+}
+
+.btn-comprar {
+  background-color: #0a3cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #062abf;
+}
