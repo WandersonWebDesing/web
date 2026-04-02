@@ -1,0 +1,66 @@
+/* ========================= */
+/* 🎨 PADRÃO WANDERSONWEB */
+/* ========================= */
+:root {
+  --cor-primaria: #1e3a8a;
+  --cor-secundaria: #0f172a;
+  --cor-destaque: #38bdf8;
+  --cor-bg: #020617;
+  --cor-texto: #ffffff;
+}
+
+/* ========================= */
+/* 🔐 LOGIN */
+/* ========================= */
+.login-container {
+  height: 100vh;
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  color: var(--cor-texto);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background: transparent;
+  border: 1px solid var(--cor-destaque);
+  color: white;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--cor-destaque);
+}
+
+.btn-login {
+  width: 100%;
+  background: var(--cor-destaque);
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #0ea5e9;
+}
+
+.error {
+  color: #f87171;
+  margin-top: 10px;
+  text-align: center;
+}
