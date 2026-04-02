@@ -133,7 +133,7 @@ export default function HeaderInteligente() {
           <Link to="/clientes" onClick={() => setMenuOpen(false)}>Portfólio</Link>
           <Link to="/comentarios" onClick={() => setMenuOpen(false)}>Comentários</Link>
           <Link to="/Servico" onClick={() => setMenuOpen(false)}>Serviços</Link>
-          <Link to="/Eletronico" onClick={() => setMenuOpen(false)}>Eletrônicos</Link>
+          <Link to="/eletronico" onClick={() => setMenuOpen(false)}>Eletrônicos</Link>
 
           <div className="mobile-actions">
             {!logado ? (
