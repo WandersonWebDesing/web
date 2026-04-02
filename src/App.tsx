@@ -12,7 +12,7 @@ import Comentarios from './pages/comentarios'; // 💡 Ajustado para Letra Maiú
 import LoginForm from './pages/LoginForm';
 import Register from './pages/Registrer'; // 💡 Corrigido o nome da variável (opcional, mas recomendado)
 // @ts-ignore
-import Eletronico from './pages/Eletronico';
+import eletronico from './pages/eletronico.tSX';
 import Footer from './pages/Footer';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Route path="/comentarios" element={<Comentarios />} /> {/* 💡 Ajustado aqui também */}
           <Route path="/login" element={<LoginForm />} />
           <Route path="/registrer" element={<Register />} />
-          <Route path="/Eletronico" element={<Eletronico />} /> {/* ✅ Nova rota */}
+          <Route path="/eletronico" element={<eletronico />} /> {/* ✅ Nova rota */}
         </Routes>
       </main>
 
